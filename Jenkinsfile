@@ -42,4 +42,14 @@ pipeline{
      }}
 
     }
+
+    stage('email notfication'){
+      mail bcc: '', body: 'pipeline executed successfully', 
+      cc: 'from jenkins', 
+      from: '', 
+      replyTo: '',
+       subject: 'regarding successful depolyment',
+        to: 'bharath.velisala@gmail.com'
+    }
+
 }
